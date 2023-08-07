@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dashboard Web</title>
+
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav {
+    background-color: #f2f2f2;
+    padding: 10px 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    margin-right: 20px;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px;
+}
+
+a:hover {
+    background-color: #ddd;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Dashboard Web</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showHome()">Home</a></li>
+            <li><a href="#" onclick="showDashboard()">Dashboard</a></li>
+            <li><a href="#" onclick="showAnalytics()">Analytics</a></li>
+            <li><a href="#" onclick="showSettings()">Settings</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home" style="display: block;">
+            <h2>Welcome to the Dashboard</h2>
+            <p>This is the homepage of the dashboard web.</p>
+        </section>
+
+        <section id="dashboard" style="display: none;">
+            <h2>Dashboard</h2>
+            <p>Here is the main dashboard content.</p>
+        </section>
+
+        <section id="analytics" style="display: none;">
+            <h2>Analytics</h2>
+            <p>View your website's analytics here.</p>
+        </section>
+
+        <section id="settings" style="display: none;">
+            <h2>Settings</h2>
+            <p>Configure your dashboard settings.</p>
+        </section>
+    </main>
+
+    <script>
+      function showHome() {
+    document.getElementById("home").style.display = "block";
+    document.getElementById("dashboard").style.display = "none";
+    document.getElementById("analytics").style.display = "none";
+    document.getElementById("settings").style.display = "none";
+}
+
+function showDashboard() {
+    document.getElementById("home").style.display = "none";
+    document.getElementById("dashboard").style.display = "block";
+    document.getElementById("analytics").style.display = "none";
+    document.getElementById("settings").style.display = "none";
+}
+
+function showAnalytics() {
+    document.getElementById("home").style.display = "none";
+    document.getElementById("dashboard").style.display = "none";
+    document.getElementById("analytics").style.display = "block";
+    document.getElementById("settings").style.display = "none";
+}
+
+function showSettings() {
+    document.getElementById("home").style.display = "none";
+    document.getElementById("dashboard").style.display = "none";
+    document.getElementById("analytics").style.display = "none";
+    document.getElementById("settings").style.display = "block";
+}
+
+    </script>
+</body>
+</html>
